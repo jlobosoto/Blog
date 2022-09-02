@@ -4,7 +4,9 @@ Clean Architecture for Web API + Angular SPA.
 ## Prerequisites
 
 Dotnet 6 SDK
+
 SQL Server
+
 IDE-Visual Studio(optional)
 
 
@@ -80,4 +82,4 @@ Password:Administrator1!
 Role: Administrator
 ```
 
-## A Total amount of 32 hours were necessary to build this app.
+## A Total amount of 8 hours were necessary to build this app.
