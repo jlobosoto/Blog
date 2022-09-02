@@ -77,3 +77,5 @@ Password:Administrator1!
 
 Role: Administrator
 ```
+
+## A Total amount of 32 hours were necessary to build this app.
