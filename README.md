@@ -2,7 +2,10 @@
 Clean Architecture for Web API + Angular SPA.
 
 ## Create Database & apply migrations
-You must update your connection string in the ConnectionStrings/DefaultConnection section on the appsettings.json file included in WebUI project.
+
+You must verify that the DefaultConnection connection string within appsettings.json located in WebUI project points to a valid SQL Server instance.
+
+When you run the application the database will be automatically created (if necessary) and the latest migrations will be applied.
 
 ex: "ConnectionStrings": {
     "DefaultConnection": "Data Source=YOUR_SERVER;Initial Catalog=DB_NAME;Integrated Security=True"
@@ -24,6 +27,8 @@ locate in ~/src/WebUI/ and open an CMD window to type the follwing command:
 ```powershell
 dotnet run
 ```
+Or simply open your IDE, I recommend Visual Studio, select WebUI project as startup project and run the project.
+
 ## Open app in web browser
 Open url https://localhost:5000 in your prefered web browser and wait until the app start.
 the app will redirect you to a final url handled by proxy.
