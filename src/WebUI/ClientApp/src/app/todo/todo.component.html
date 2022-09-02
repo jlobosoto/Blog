@@ -10,8 +10,7 @@
         <h2 class="float-start">Posts</h2>
       </div>
       <ul class="list-group">
-        <li *ngFor="let post of posts; index as i" class="list-group-item"
-          [ngClass]="{ 'active': selectedList == post }" (click)="selectedList = post">
+        <li *ngFor="let post of posts; index as i" class="list-group-item">
           <div class="clearfix">
             <div class="float-start" class="list-group-item">
               <h6>Tittle</h6>
@@ -22,7 +21,7 @@
               {{post.createdBy}} <h6> On </h6> {{post.createdOn}}
             </div>
           </div>
-          <div class="col-sm-8" *ngIf="selectedList">
+          <div class="col-sm-8" >
             <div class="clearfix">
               <h6 class="float-start">Comments</h6>
             </div>

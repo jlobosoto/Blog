@@ -23,7 +23,7 @@ public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand>
 
         if (entity == null)
         {
-            throw new NotFoundException(nameof(TodoItem), request.Id);
+            throw new NotFoundException(nameof(Comment), request.Id);
         }
 
         _context.Comments.Remove(entity);
