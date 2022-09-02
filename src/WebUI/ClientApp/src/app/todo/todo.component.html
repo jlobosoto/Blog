@@ -1,0 +1,53 @@
+<h1>BLOG</h1>
+
+<p *ngIf="!posts"><em>Loading...</em></p>
+
+<div *ngIf="posts">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="clearfix">
+        <h2 class="float-start">Posts</h2>
+      </div>
+      <ul class="list-group">
+        <li *ngFor="let post of posts; index as i" class="list-group-item"
+          [ngClass]="{ 'active': selectedList == post }" (click)="selectedList = post">
+          <div class="clearfix">
+            <div class="float-start" class="list-group-item">
+              <h6>Tittle</h6>
+              {{ post.title }}
+              <h6>Content</h6>
+              {{post.content}}
+              <h6>Created By</h6>
+              {{post.createdBy}} <h6> On </h6> {{post.createdOn}}
+            </div>
+          </div>
+          <div class="col-sm-8" *ngIf="selectedList">
+            <div class="clearfix">
+              <h6 class="float-start">Comments</h6>
+            </div>
+            <ul id="todo-items" class="list-group mb-2">
+              <li class="list-group-item" *ngFor="let comment of post.comments; index as i"> 
+                <div class="todo-item-title" 
+                    class="form-control item-input-control">
+                  <li >
+                      <div class="float-start">
+                        {{ comment.content }}
+                        <h6>Commented By</h6>
+                        {{ comment.commentedBy }} <h6> on </h6>{{comment.createdOn}}
+                      </div>
+                    </li>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="debug">
+  <pre>{{ posts | json }}</pre>
+</div>
+
