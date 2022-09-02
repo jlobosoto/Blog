@@ -1,6 +1,13 @@
 # Blog
 Clean Architecture for Web API + Angular SPA.
 
+## Prerequisites
+
+Dotnet 6 SDK
+SQL Server
+IDE-Visual Studio(optional)
+
+
 ## Create Database & apply migrations
 
 You must verify that the DefaultConnection connection string within appsettings.json located in WebUI project points to a valid SQL Server instance.
