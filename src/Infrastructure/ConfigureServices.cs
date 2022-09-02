@@ -1,5 +1,4 @@
 ﻿using Blog.Application.Common.Interfaces;
-using Blog.Infrastructure.Files;
 using Blog.Infrastructure.Identity;
 using Blog.Infrastructure.Persistence;
 using Blog.Infrastructure.Persistence.Interceptors;
@@ -44,7 +43,7 @@ public static class ConfigureServices
 
         services.AddTransient<IDateTime, DateTimeService>();
         services.AddTransient<IIdentityService, IdentityService>();
-        services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
+       
 
         services.AddAuthentication()
             .AddIdentityServerJwt();

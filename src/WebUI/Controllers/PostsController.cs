@@ -21,13 +21,15 @@ public class PostsController : ApiControllerBase
         return await Mediator.Send(new GetPostsQuery());
     }
 
-    [HttpGet("GetPendingPosts")]
+    [Route("GetPendingPosts")]
+    [HttpGet]
     public async Task<ActionResult<PostsVm>> GetPendingPosts()
     {
         return await Mediator.Send(new GetPendingPostsQuery());
     }
 
-    [HttpGet("GetOwnPosts")]
+    [Route("GetOwnPosts")]
+    [HttpGet]
     public async Task<ActionResult<PostsVm>> GetOwnPosts()
     {
         return await Mediator.Send(new GetOwnPostsQuery());
@@ -51,27 +53,18 @@ public class PostsController : ApiControllerBase
 
         return NoContent();
     }
-
-    [HttpPut("ApprovePost")]
-    public async Task<ActionResult> Approve(int id, ApprovePostsCommand command)
+    [Route("ApprovePost")]
+    [HttpPut]
+    public async Task<ActionResult> Approve(ApprovePostsCommand command)
     {
-        if (id != command.Id)
-        {
-            return BadRequest();
-        }
-
         await Mediator.Send(command);
 
         return NoContent();
     }
-
-    [HttpPut("RejectPost")]
-    public async Task<ActionResult> Reject(int id, RejectPostsCommand command)
+    [Route("RejectPost")]
+    [HttpPut]
+    public async Task<ActionResult> Reject(RejectPostsCommand command)
     {
-        if (id != command.Id)
-        {
-            return BadRequest();
-        }
 
         await Mediator.Send(command);
 

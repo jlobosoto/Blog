@@ -2,7 +2,6 @@
 using Blog.Application.Common.Interfaces;
 using Blog.Domain.Entities;
 using Blog.Domain.Enums;
-using Blog.Domain.Events;
 using Blog.Domain.Exceptions;
 using MediatR;
 
