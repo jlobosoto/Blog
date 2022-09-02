@@ -9,10 +9,12 @@ ex: "ConnectionStrings": {
   }
   
   
-  After that, open a CMD window to run the following command:
+  After that, open a CMD window to run the following commands to ensure dotnet tools is updated with the latest version to avoid issues creating the DB:
   
   
 ```powershell
+dotnet tool update --global dotnet-ef
+
 dotnet ef database update --project src\Infrastructure --startup-project src\WebUI
 ```
 
