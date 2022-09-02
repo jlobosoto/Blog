@@ -34,10 +34,12 @@ locate in ~/src/WebUI/ and open an CMD window to type the follwing command:
 ```powershell
 dotnet run
 ```
+Note: first time running the app will spent several minutes installing all Angular dependencies.
+
 Or simply open your IDE, I recommend Visual Studio, select WebUI project as startup project and run the project.
 
 ## Open app in web browser
-Open url https://localhost:5000 in your prefered web browser and wait until the app start.
+Open url http://localhost:5000 in your prefered web browser and wait until the app start.
 the app will redirect you to a final url handled by proxy.
 
 ## Sample data to Login.
