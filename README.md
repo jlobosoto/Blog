@@ -5,6 +5,8 @@ Clean Architecture for Web API + Angular SPA.
 
 Dotnet 6 SDK
 
+Node Js
+
 SQL Server
 
 IDE-Visual Studio(optional)
